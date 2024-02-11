@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello, world!</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="" />
+    <style>
+      body {
+        background-color: black;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      body::after {
+        content: "";
+        background-image: url(https://b1857076.smushcdn.com/1857076/wp-content/uploads/2023/02/The-role-of-retail-security-guards-in-handling-difficult-customers-1-scaled.jpg?lossy=1&strip=1&webp=1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        opacity: 0.1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+      }
+      #yoo  /* the title */ {
+        position: absolute;
+        top: 10%;
+        text-align: center;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+      #span1 /* the data */ {
+        position: absolute;
+        color: rgb(157, 157, 157);
+        font-size: 30px;
+        font-family: ubuntu;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #span2 /* the message */ {
+        position: absolute;
+        color: #517297;
+        text-wrap: nowrap;
+        font-size: 40px;
+        font-family: ubuntu;
+        top: 20%;
+        text-align: center;
+        transform: translateX(-50%);
+        left: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <span id="yoo"></span>
+    <span id="span1"></span>
+    <h1 id="span2"></h1>
+    <script>
+      var age = prompt("What is your age?");
+      if (age >= 21) {
+        alert("great!");
+        var experience = prompt("How many years of experience do you have?");
+        if (experience >= 2) {
+          alert("great!");
+          var distance = prompt("How far are you from the company?");
+          if (distance > 1.2) {
+            alert("great!");
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              alert("You passed the application!");
+              document.getElementById("span2").innerHTML = "Your application:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> ✓ Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              // this one is different the fact all is failed unless it is all correct i forgot to add the failed on all others
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> ✓ Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          } else {
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> ✓ Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> ✓ Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          }
+        } else {
+          var distance = prompt("How far are you from the company?");
+          if (distance > 1.2) {
+            alert("great!");
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          } else {
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> ✓ Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          }
+        }
+      } else {
+        var experience = prompt("How many years of experience do you have?");
+        if (experience >= 2) {
+          alert("great!");
+          var distance = prompt("How far are you from the company?");
+          if (distance > 1.2) {
+            alert("great!");
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> ✓ Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age:" + age + "<br> ✓ Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          } else {
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> ✓ Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> ✓ Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          }
+        } else {
+          var distance = prompt("How far are you from the company?");
+          if (distance > 1.2) {
+            alert("great!");
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> ✓ Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          } else {
+            var drive = prompt("Can you drive? (yes/no)");
+            if (drive == "yes") {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> ✓ Drive: " + drive;
+            } else {
+              document.getElementById("span2").innerHTML = "Your application failed:";
+              document.getElementById("span1").innerHTML = "<br> 𐄂 Age: " + age + "<br> 𐄂 Experience: " + experience + "<br> 𐄂 Distance: " + distance + "<br> 𐄂 Drive: " + drive;
+            }
+          }
+        }
+      }
+    </script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/2621168/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/channelSplitMaterial.min.js"></script>
+    <script>
+      var content = document.getElementById("yoo"),
+        text = new Blotter.Text("The Security Guard", { family: "chillion", size: 40, fill: "#374f6b" }),
+        material = new Blotter.ChannelSplitMaterial();
+      (material.uniforms.uOffset.value = 0.01), (material.uniforms.uRotation.value = 1), (material.uniforms.uApplyBlur.value = 1), (material.uniforms.uAnimateNoise.value = 1);
+      var blotterInstance1 = new Blotter(material, { texts: text }),
+        scope1 = blotterInstance1.forText(text);
+      function moveIt(e) {
+        (material.uniforms.uRotation.value = 0.2 * e.clientX), (material.uniforms.uOffset.value = 1e-4 * e.clientY);
+      }
+      scope1.appendTo(content), (document.onmousemove = moveIt);
+    </script>
+  </body>
+</html>
